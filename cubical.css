@@ -1,0 +1,47 @@
+body  {
+    background-image: url("Images/music.jpg"); 
+}
+.search-artist{
+    position: absolute;
+    top: 50%;
+    left: 48.2%;
+    display: block;
+    width: 18em;
+    height: 10em;
+    padding: 1px;
+    background: #973007;
+    border-radius: 100px;
+    box-shadow: inset 0 7em 10em -5em rgba(255,255,255,0.6), 0 0.3em 0.5em -0.2em rgba(100,100,100,1), 0 1em 2em -0.75em rgba(100,100,100,0.75), 0 1em 3em -0.5em rgba(100,100,100,0.5), 0 3em 3em -0.25em rgba(100,100,100,0.2);
+    transform: translate(-50%,-50%);
+}
+
+.btn-artist{
+    position: absolute;
+    top: 41%;
+    left: 27%;
+    border-radius: 15px;
+    color: brown;
+}
+.btn-artist:hover{
+	box-shadow: inset 0 7em 10em -5em rgba(255,255,255,0.6), 0 0.3em 0.5em -0.2em rgba(100,100,100,1), 0 1em 2em -0.75em rgba(100,100,100,0.75), 0 1em 3em -0.5em rgba(100,100,100,0.5), 0 3em 3em -0.25em rgba(100,100,100,0.2);
+}
+
+.searchBox{
+	background: rgb(117, 104, 81);
+    border-radius: 32px;
+    box-shadow: rgb(41, 23, 23) 7px 16px;
+}
+
+.dataBox{
+	background: gainsboro;
+    border-radius: 30px;
+}
+.btn-search{
+	margin-right: 43%;
+}
+label{
+	color: white;
+}
+span{
+	color: rgb(238, 106, 91);;
+}
