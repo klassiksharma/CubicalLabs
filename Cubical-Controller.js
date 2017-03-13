@@ -1,5 +1,6 @@
 cubicalApp.controller('CubicalController',['$scope','$http', function($scope, $http){
 
+	// Search Function to request the data on the basis of input......
 	$scope.search = function(){
 	var url;
 		var data = {
@@ -7,7 +8,7 @@ cubicalApp.controller('CubicalController',['$scope','$http', function($scope, $h
                 limit: $scope.limit
             };
 	var str = jQuery.param( data );
-	var url =  "http://itunes.apple.com/search?"+str;
+	var url =  "https://itunes.apple.com/search?"+str;
 		$http.get(url)
 		  .then(function(response) {
 			  $scope.result = response.data.results;
@@ -15,9 +16,10 @@ cubicalApp.controller('CubicalController',['$scope','$http', function($scope, $h
 
 	};
 	
+	// getData Function to request the data for the particular artist.......
 	$scope.getData = function(name){
 		var artistName = name.artistName ;
-		var url = "http://itunes.apple.com/search?term="+artistName+"&limit=1";
+		var url = "https://itunes.apple.com/search?term="+artistName+"&limit=1";
 		$http.get(url)
 		  .then(function(response) {
 			  $scope.output = response.data.results;
