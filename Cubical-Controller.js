@@ -11,7 +11,7 @@ cubicalApp.controller('CubicalController',['$scope','$http', function($scope, $h
 	var url =  "https://itunes.apple.com/search?"+str;
 		$http.get(url,
 			  {
-		headers:{Access-Control-Allow-Origin: '*'}
+		headers:{'Access-Control-Allow-Origin': '*'}
 		})
 		  .then(function(response) {
 			  $scope.result = response.data.results;
@@ -25,7 +25,7 @@ cubicalApp.controller('CubicalController',['$scope','$http', function($scope, $h
 		var url = "https://itunes.apple.com/search?term="+artistName+"&limit=1";
 		$http.get(url,
 			  {
-		headers:{Access-Control-Allow-Origin: '*'}
+		headers:{'Access-Control-Allow-Origin': '*'}
 		})
 		  .then(function(response) {
 			  $scope.output = response.data.results;
