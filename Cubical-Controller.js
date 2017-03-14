@@ -9,10 +9,7 @@ cubicalApp.controller('CubicalController',['$scope','$http', function($scope, $h
             };
 	var str = jQuery.param( data );
 	var url =  "https://itunes.apple.com/search?"+str;
-		$http.get(url,
-			  {
-		headers:{'Content-Type': 'application/json'}
-		})
+		$http.get(url)
 		  .then(function(response) {
 			  $scope.result = response.data.results;
 		  });
@@ -23,10 +20,7 @@ cubicalApp.controller('CubicalController',['$scope','$http', function($scope, $h
 	$scope.getData = function(name){
 		var artistName = name.artistName ;
 		var url = "https://itunes.apple.com/search?term="+artistName+"&limit=1";
-		$http.get(url,
-			  {
-		headers:{'Content-Type': 'application/json'}
-		})
+		$http.get(url)
 		  .then(function(response) {
 			  $scope.output = response.data.results;
 			 // console.log($scope.output);	
